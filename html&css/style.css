@@ -1,0 +1,130 @@
+:root {
+  /* colors */
+  --back-img-color: rgba(58, 58, 158, 0.8);
+  --back-img-color-2: rgba(136, 136, 206, 0.7);
+  --back-input-color: #fff;
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-beta: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+  --color-input: #495057;
+  --border-input-color: #ced4da;
+
+  /* font styles */
+  --main-font-family: "Poppins", sans-serif;
+  --main-font-size: 1rem;
+  --main-line-height: 1.4;
+  --main-font-weight: 400;
+
+  /* sizes */
+  --content-max-width: 720px;
+  --border-input-radius: 0.25rem;
+  --label-placeholder-font-size: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font-family);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  font-size: var(--main-font-size);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      var(--back-img-color),
+      var(--back-img-color-2)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--content-max-width);
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 0.5rem;
+  max-width: 100%;
+}
+
+.title-box__title {
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 2em;
+}
+
+.title-box__description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--color-darkblue-beta);
+  padding: 2.5rem;
+  border-radius: var(--border-input-radius);
+}
+
+.survey-form__group {
+  margin: 0 auto 20px auto;
+  padding: 4px;
+  width: 100%;
+}
+
+.survey-form__label {
+  display: flex;
+  align-items: center;
+  font-size: var(--label-placeholder-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.survey-form__input {
+  padding: 6px 12px;
+  display: block;
+  width: 100%;
+  height: 38px;
+  color: var(--color-input);
+  background-color: var(--back-input-color);
+  background-clip: padding-box;
+  border: 1px solid var(--border-input-color);
+  border-radius: var(--border-input-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: var(--label-placeholder-font-size);
+  font-family: var(--main-font-family);
+}
