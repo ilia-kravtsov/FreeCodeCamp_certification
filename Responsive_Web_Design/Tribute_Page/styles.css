@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-light: #eee;
+    --color-lightest: #fff;
+    --color-dark: #333;
+    --accent-color: #477ca7;
+
+    --font-family-primary: 'BlinkMacSystemFont';
+    --font-size-primary: 10px;
+    --font-size-secondary: 25px;
+    --font-weight-regular: 400;
+
+    --font-line-height-primary: 1.5;
+    --font-line-height-secondary: 1.6;
+}
+
+body {
+    font-family: -apple-system, var(--font-family-primary, 'BlinkMacSystemFont'), 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.6rem;
+    line-height: var(--font-line-height-primary, 1.5);
+    text-align: center;
+    color: var(--color-dark, #333);
+}
+
+html {
+    font-size: var(--font-size-primary, 10px);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 8px;
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--color-light, #eee);
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding-block-start: 2.6rem;
+}
+
+.titleBox__title {
+    font-size: 4rem;
+}
+
+.imageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin-block-start: 1.6rem;
+    background: var(--color-lightest, #eee);
+}
+
+.imageBox__image {
+    max-width: 100%;
+}
+
+.info {
+    padding-block-start: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    width: 70%;
+}
+
+.info__title {
+    width: 100%;
+}
+
+.info__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 550px;
+    width: 100%;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.info__quote {
+    max-width: 550px;
+    width: 100%;
+    text-align: left;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem
+}
+
+.info__link {
+    color: var(--accent-color, #477ca7);
+}
+
+@media (max-width: 1000px) {
+    body {
+    font-size: 2rem;
+    }
+
+    .titleBox__title {
+    font-size: 3rem;
+    }
+
+    .titleBox {
+        padding-block-start: 1.6rem;
+    }
+}
+
+

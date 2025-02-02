@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel='stylesheet' href='styles.css'>
+    <title>https://survey-form.freecodecamp.rocks/</title>
+</head>
+<body class='page'>
+<div class='container'>
+
+    <header class='header'>
+        <h1 class='header__title' id='title'>
+            freeCodeCamp Survey Form
+        </h1>
+        <p class='header__description' id='description'>
+            Thank you for taking the time to help us improve the platform
+        </p>
+    </header>
+
+    <form class='form' id='survey-form'>
+
+        <div class='form__item'>
+            <label
+                    class='form__label'
+                    id='name-label'
+                    for='name'
+            >
+                Name
+            </label>
+            <input
+                    class='form__input-text'
+                    id='name'
+                    type='text'
+                    placeholder='Enter your name'
+                    required
+            />
+        </div>
+
+        <div class='form__item'>
+            <label
+                    class='form__label'
+                    id='email-label'
+                    for='email'
+            >
+                Email
+            </label>
+            <input
+                    class='form__input-text'
+                    id='email'
+                    type='email'
+                    placeholder='Enter your Email'
+                    required
+            />
+        </div>
+
+        <div class='form__item'>
+            <label
+                    class='form__label'
+                    id='number-label'
+                    for='number'
+            >
+                Age
+                <span class='form__label-clue'>(optional)</span>
+            </label>
+            <input
+                    class='form__input-text'
+                    id='number'
+                    type='number'
+                    min='10'
+                    max='99'
+                    placeholder='Age'
+            />
+        </div>
+
+        <div class='form__item'>
+            <label
+                    class='form__label'
+                    for='dropdown'
+            >
+                Which option best describes your current role?
+            </label>
+            <select class='form__input-text' id='dropdown'>
+                <option disabled selected value>
+                    Select current role
+                </option>
+                <option>Student</option>
+                <option>Full time Job</option>
+                <option>Full time Learner</option>
+                <option>Prefer not to say</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class='form__item'>
+            <p class='form__item-title'>
+                Would you recommend freeCodeCamp to a friend?
+            </p>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='radio'
+                        checked
+                        name='user-recommend'
+                        value='definitely'
+                />
+                Definitely
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='radio'
+                        name='user-recommend'
+                        value='maybe'
+                />
+                Maybe
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='radio'
+                        name='user-recommend'
+                        value='not sure'
+                />
+                Not sure
+            </label>
+        </div>
+
+        <div class='form__item'>
+            <label
+                    class='form__label indent'>
+                What is your favorite feature of freeCodeCamp?
+            </label>
+            <select
+                    class='form__input-text'
+                    id='most-like'
+                    name='most-like'
+            >
+                <option disabled selected value>Select an option</option>
+                <option value='challenges'>Challenges</option>
+                <option value='project'>Project</option>
+                <option value='community'>Community</option>
+                <option value='openSource'>Open source</option>
+            </select>
+        </div>
+
+        <div class='form__item'>
+            <label class='form__label'>
+                What would you like to see improved?
+                <span class='form__label-clue'>
+                    (Check all that apply)
+                </span>
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='front-end projects'
+                />
+                Front-end Projects
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='back-end projects'
+                />
+                Back-end Projects
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='data-visualization'
+                />
+                Data Visualization
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='challenges'
+                />
+                Challenges
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='open-source-community'
+                />
+                Open Source Community
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='Gitter-help-rooms'
+                />
+                Gitter help rooms
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='videos'
+                />
+                Videos
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='city-meetups'
+                />
+                City Meetups
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='wiki'
+                />
+                Wiki
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='forum'
+                />
+                Forum
+            </label>
+            <label class='form__radioButton-label'>
+                <input
+                        class='form__radioButton'
+                        type='checkbox'
+                        name='prefer'
+                        value='additional courses'
+                />
+                Additional Courses
+            </label>
+        </div>
+
+        <div class='form__item'>
+            <p class='form__item-title indent'>
+                Any comments or suggestions?
+            </p>
+            <textarea
+                    class='form__comment'
+                    id='comments'
+                    name='comment'
+                    placeholder='Enter your comment here...'
+            >
+          </textarea>
+        </div>
+
+        <div class='form__item'>
+            <button
+                    class='form__submit-button indent'
+                    type='submit'
+                    id='submit'
+            >
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

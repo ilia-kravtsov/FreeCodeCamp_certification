@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-input-outline-focus: #1a3a73;
+  --color-input-focus-border: #77b8fd;
+  --color-lightest: #fff;
+  --color-light: #f3f3f3;
+  --color-medium: #ced4da;
+  --color-medium-label: #e4e4e4;
+  --color-dark: #1b1b32;
+  --color-dark-opacity: #1b1b32cc;
+  --color-accent: #37af65;
+  --color-background-primary: #3a3a9ecc;
+  --color-background-secondary: #8888ceb3;
+  --color-text-shadow: #00000066;
+  --color-text-placeholder: #495057;
+
+  --font-family-primary: 'Poppins';
+  --font-size-primary: 16px;
+  --font-weight-extra-light: 200;
+  --font-weight-regular: 400;
+  --font-line-height-primary: 1.4;
+  --font-line-height-secondary: 1.2;
+
+  --transition-time: 0.15s;
+}
+
+html {
+  font-size: var(--font-size-primary, 16px);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light, #f3f3f3);
+  font-family: var(--font-family-primary, 'Poppins'), sans-serif;
+  font-weight: var(--font-weight-regular, 400);
+  font-size: var(--font-size-primary, 16px);
+  line-height: var(--font-line-height-primary, 1.4);
+}
+
+.page::before {
+  content: '';
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: -1;
+  inline-size: 100%;
+  block-size: 100%;
+  background:
+          linear-gradient(115deg,
+          var(--color-background-primary, #3a3a9ecc),
+          var(--color-background-secondary, #8888ceb3)),
+          url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg')
+          center / cover no-repeat var(--color-dark, #1b1b32);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  width: 100%;
+  padding-block-start: 3.125rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.625rem;
+}
+
+.header__title {
+  font-weight: var(--font-weight-regular, 400);
+  font-size: 2rem;
+  line-height: var(--font-line-height-secondary, 1.2);
+}
+
+.header__description {
+  font-weight: var(--font-weight-extra-light, 200);
+  font-size: 1.125rem;
+  font-style: italic;
+  text-shadow: 1px 1px 1px var(--color-text-shadow, #00000066);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  padding: 2.5rem 0.625rem;
+  background: var(--color-dark-opacity, #1b1b32cc);
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block-end: 1.25rem;
+  padding: 0.25rem;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+.form__label-clue {
+  margin-inline-start: 0.45rem;
+  color: var(--color-medium-label, #e4e4e4);
+  font-size: 0.9rem;
+}
+
+.form__input-text {
+  display: block;
+  inline-size: 100%;
+  block-size: 2.375rem;
+  border: 1px solid var(--color-medium, #ced4da);
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  color: var(--color-text-placeholder, #495057);
+  background-color: var(--color-lightest, #fff);
+  background-clip: padding-box;
+  transition:
+          border-color var(--transition-time, 0.15s) ease-in-out,
+          box-shadow var(--transition-time, 0.15s) ease-in-out;
+}
+
+.form__item-title {
+  font-size: 1.125rem;
+}
+
+.form__radioButton-label {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.125rem;
+}
+
+.form__radioButton {
+  display: inline-block;
+  min-inline-size: 1.25rem;
+  min-block-size: 1.25rem;
+}
+
+.form__comment {
+  inline-size: 100%;
+  border-radius: 2px;
+  padding: 0.625rem;
+  min-block-size: 120px;
+  resize: vertical;
+}
+
+.form__submit-button {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  padding: 0.75rem;
+  color: inherit;
+  background: var(--color-accent, #37af65);
+  cursor: pointer;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input, button, select, textarea {
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid var(--color-input-focus-border, #77b8fd);
+  outline: 3px solid var(--color-input-outline-focus, #1a3a73);
+}
+
+input:focus, textarea:focus {
+  border: 1px solid var(--color-input-focus-border, #77b8fd);
+  outline: 3px solid var(--color-input-outline-focus, #1a3a73);
+  transition: outline var(--transition-time, 0.3s) ease-in-out,
+  border-color var(--transition-time, 0.3s) ease-in-out;
+}
+
+input:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 3px solid var(--color-input-outline-focus, #1a3a73);
+  transition: outline var(--transition-time, 0.3s) ease-in-out;
+}
+
+.indent {
+  margin-block-start: 8px;
+}
+
+@media (min-width: 480px) {
+  .form {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+
+
