@@ -1,39 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='styles.css'>
     <title>Tribute Page</title>
 </head>
 <body>
-<main class="main" id="main">
-    <div class="titleBox" id="titleContainer">
-        <h1 class="titleBox__title" id="title">Dr. Norman Borlaug</h1>
-        <p class="titleBox__description">The man who saved a billion lives</p>
+<main class='main' id='main'>
+    <label class='theme-toggle'>
+        <input type='checkbox' id='theme-checkbox'>
+        <span class='slider'></span>
+    </label>
+
+    <div class='titleBox' id='titleContainer'>
+        <h1 class='titleBox__title' id='title'>Dr. Norman Borlaug</h1>
+        <p class='titleBox__description'>The man who saved a billion lives</p>
     </div>
-    <figure class="imageBox" id="img-div">
-        <img class="imageBox__image" id="image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg"
-             alt="Norman Borlaug and friends">
-        <figcaption class="imageBox__description" id="img-caption">
+    <figure class='imageBox' id='img-div'>
+        <img class='imageBox__image'
+             id='image'
+             src='https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg'
+             alt='Norman Borlaug and friends'
+        >
+        <figcaption class='imageBox__description' id='img-caption'>
             Dr. Norman Borlaug, third from the left, trains biologists in Mexico
             on how to increase wheat yields - part of his life-long war on hunger.
         </figcaption>
     </figure>
-    <section class="info" id="tribute-info">
-        <h3 class="info__title" id="headline">Here's a time line of Dr. Borlaug's life:</h3>
-        <ul class="info__list">
+    <section class='info' id='tribute-info'>
+        <h3 class='title' id='headline'>Here's a time line of Dr. Borlaug's life:</h3>
+        <ul class='info__list'>
             <li><strong>1914</strong> - Born in Cresco, Iowa</li>
             <li>
                 <strong>1933</strong> - Leaves his family's farm to attend the
                 University of Minnesota, thanks to a Depression era program known as
-                the "National Youth Administration"
+                the 'National Youth Administration'
             </li>
             <li>
                 <strong>1935</strong> - Has to stop school and save up more money.
                 Works in the Civilian Conservation Corps, helping starving
-                Americans. "I saw how food changed them", he said. "All of this left
-                scars on me."
+                Americans. 'I saw how food changed them', he said. 'All of this left
+                scars on me.'
             </li>
             <li>
                 <strong>1937</strong> - Finishes university and takes a job in the
@@ -86,35 +94,35 @@
                 A&amp;M University
             </li>
             <li>
-                <strong>2005</strong> - states "we will have to double the world
-                food supply by 2050." Argues that genetically modified crops are the
+                <strong>2005</strong> - states 'we will have to double the world
+                food supply by 2050.' Argues that genetically modified crops are the
                 only way we can meet the demand, as we run out of arable land. Says
-                that GM crops are not inherently dangerous because "we've been
+                that GM crops are not inherently dangerous because 'we've been
                 genetically modifying plants and animals for a long time. Long
-                before we called it science, people were selecting the best breeds."
+                before we called it science, people were selecting the best breeds.'
             </li>
             <li><strong>2009</strong> - dies at the age of 95.</li>
         </ul>
-        <blockquote class="info__quote">
+        <blockquote class='info__quote'>
             <p id='Borlaug'>
-                "Borlaug's life and achievement are testimony to the far-reaching
+                'Borlaug's life and achievement are testimony to the far-reaching
                 contribution that one man's towering intellect, persistence and
-                scientific vision can make to human peace and progress."
+                scientific vision can make to human peace and progress.'
             </p>
-            <cite id="Borlaug_description">-- Indian Prime Minister Manmohan Singh</cite>
+            <cite id='Borlaug_description'>Indian Prime Minister Manmohan Singh</cite>
         </blockquote>
-        <h3 id="lowTopic">
+        <h3 class='title' id='lowTopic'>
             If you have time, you should read more about this incredible human
             being on his
             <a
-                class="info__link"
-                id="tribute-link"
-                href="https://en.wikipedia.org/wiki/Norman_Borlaug"
-                target="_blank"
-                rel="noopener noreferrer"
+                    class='info__link'
+                    id='tribute-link'
+                    href='https://en.wikipedia.org/wiki/Norman_Borlaug'
+                    target='_blank'
+                    rel='noopener noreferrer'
             >
                 Wikipedia entry
-            </a>.
+            </a>
         </h3>
     </section>
 </main>
