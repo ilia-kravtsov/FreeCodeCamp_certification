@@ -17,16 +17,18 @@
 
 :root {
     --btn-color: var(--color-accent);
+    --color-accent: #f39c12;
     --bg-color: var(--color-dark);
     --color-medium: #2c3e50;
     --color-dark: #121212;
     --color-darkest: #000;
+    --bg-color-light: #333;
+    --bg-color-dark: #1e1e1e;
     --color-light: #f4f4f4;
     --color-lighter: #ecf0f1;
     --color-lightest: #fff;
     --color-hover-link: #34495e;
     --color-shadow: #00000019;
-    --color-accent: #f39c12;
     --font-size-primary: 16px;
     --font-family-primary: 'Montserrat';
     --font-line-height-primary: 1.6;
@@ -39,8 +41,9 @@ html {
 }
 
 .page {
-    font-family: var(--font-family-primary), sans-serif;
+    width: 100vw;
     color: var(--color-lightest, #fff);
+    font-family: var(--font-family-primary), sans-serif;
     background-color: var(--color-dark, #121212);
 }
 
@@ -48,9 +51,9 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--color-darkest, #000000CC);
     padding: 2rem 0;
     text-align: center;
+    background-color: var(--color-darkest, #000000CC);
 }
 
 .header__nav {
@@ -59,69 +62,60 @@ html {
 }
 
 .header__list {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    list-style: none;
 }
 
 .header__link {
-    text-decoration: none;
-    color: #fff;
+    color: var(--color-lightest, #fff);
     font-size: 18px;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
 .header__link:hover {
-    color: #f39c12;
-}
-
-.link-box {
-    display: grid;
-    min-width: 700px;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--bg-color);
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
+    color: var(--color-accent, #f39c12);
 }
 
 .link {
     position: relative;
     display: inline-block;
-    padding: 25px 30px;
     margin: 40px 10px;
+    padding: 25px 30px;
+    overflow: hidden;
     color: var(--btn-color);
+    letter-spacing: 4px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s linear;
-    letter-spacing: 4px;
-    overflow: hidden;
 }
 .link.link:hover {
-    background: var(--btn-color);
-    color: var(--bg-color);
     box-shadow: 0 0 5px var(--btn-color), 0 0 25px var(--btn-color),
     0 0 50px var(--btn-color), 0 0 200px var(--btn-color);
+    color: var(--bg-color);
+    background: var(--btn-color);
 }
 
 
 .welcome, .projects, .footer {
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
 .welcome {
     gap: 3rem;
+    padding-block-start: 12rem;
 }
 
 .welcome__title {
-    font-size: 50px;
     font-weight: bold;
+    font-size: 50px;
 }
 
 .welcome__text-box {
@@ -131,50 +125,50 @@ html {
 }
 
 .welcome__text {
-    font-size: 20px;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 .imageBox {
-    max-width: 300px;
     width: 100%;
+    max-width: 300px;
 }
 
 .image {
     width: 100%;
     border-radius: 50%;
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-accent, #f39c12);
 }
 
 .projects {
-    background-color: #1e1e1e;
+    background-color: var(--bg-color-dark, #1e1e1e);
 }
 
 .projects__title {
-    font-size: 40px;
     margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .projects__list {
     display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
-    align-items: stretch;
     justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
 }
 
 .projects__item {
-    background-color: #333;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    transition: transform 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--bg-color-light, #333);
+    transition: transform 0.3s;
 }
 
 .projects__item:hover {
@@ -192,20 +186,20 @@ html {
 .project-tile__link-box {
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
 }
 
 .project-tile__link {
-    text-decoration: none;
-    color: #f39c12;
+    color: var(--color-accent, #f39c12);
     font-weight: bold;
+    text-decoration: none;
 }
 
 .footer {
-    background-color: #121212;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: var(--color-dark, #121212);
 }
 
 .footer__text {
@@ -213,7 +207,7 @@ html {
 }
 
 .footer__text a {
-    color: #f39c12;
+    color: var(--color-accent, #f39c12);
     text-decoration: none;
 }
 
@@ -222,14 +216,24 @@ html {
 }
 
 @media (max-width: 768px) {
+    .welcome {
+        min-height: auto;
+    }
+
     .welcome__title {
         font-size: 40px;
     }
+
     .welcome__text {
         font-size: 18px;
     }
+
     .projects__item {
         width: 90%;
+    }
+
+    .header__list {
+        gap: 20px;
     }
 }
 
